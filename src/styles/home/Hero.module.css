@@ -1,0 +1,106 @@
+/* styles/home/Hero.module.css */
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 2rem;
+  gap: 3rem;
+  overflow: hidden;
+  min-height: 80vh
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+}
+
+.textSection {
+  flex: 1;
+  max-width: 50%;
+  color: #333;
+}
+
+.textSection h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #111;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.textSection p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.ctaButton {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 65, 108, 0.3);
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 75, 43, 0.4);
+}
+
+@media (max-width: 768px) {
+  .textSection {
+    max-width: 100%;
+  }
+
+  .textSection h1 {
+    font-size: 2.2rem;
+  }
+
+  .textSection p {
+    font-size: 1rem;
+  }
+}
+
+.imageSection{
+    flex: 1;
+    max-width: 50%;
+    overflow: hidden;
+    position: relative;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slider{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slide{
+    min-width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.active{
+    opacity: 1;
+}
